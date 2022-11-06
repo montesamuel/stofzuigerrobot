@@ -180,7 +180,7 @@ float  readBattery(int input) {
   int readInput;
   float voltage;
   readInput = analogRead(input);
-  voltage = (((readInput * 4.9) / 1000) * voltageBatCharged ) / 5; //Resolution of analog input = 4.9mV per Voltage
+  voltage = (((readInput * 8) / 1000) * voltageBatCharged ) / 2; //Resolution of analog input = 4.9mV per Voltage
   Serial.print("Battery= ");
   Serial.println(voltage);
   return voltage;
